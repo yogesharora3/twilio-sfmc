@@ -40,8 +40,9 @@ app.get('/contact',(req,res)=>{
   
   client.connect();
   
-  client.query('SELECT Id,LastName FROM salesforce.contact;', (err, res) => {
-    if (err) throw err;
+  client.query('SELECT sfid ,id,lastname FROM salesforce.contact;', (err, res) => {
+    if (err) console.log(err);
+    console.log(res);
     for (let row of res.rows) {
       console.log(JSON.stringify(row));
     }
