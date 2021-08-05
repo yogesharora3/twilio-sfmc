@@ -44,23 +44,7 @@ app.get('/contact',(req,res)=>{
         results: activity.logExecuteData,
     });
   }
-  
-  // const client = new Client({
-  //   connectionString: 'postgres://cqgiyhnuzzbhif:be049574f95dae2045a41aa2dc954c737f134c1a43cac010b6ef36d137fa2b6c@ec2-34-197-105-186.compute-1.amazonaws.com:5432/dglaqh0qvojll',
-  //   ssl: true
-  // });
-  
-  // client.connect();
-  // console.log('i am here');
-  // client.query('SELECT * FROM salesforce.contact', (err, res) => {
-  //   if (err) console.log(err);
-  //   console.log(res);
-  //   for (let row of res.rows) {
-  //     console.log(JSON.stringify(row));
-  //   }
-  //   client.end();
-  // });
-  
+ 
 });
 app.post('/login', routes.login );
 app.post('/logout', routes.logout );
