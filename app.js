@@ -29,8 +29,8 @@ if ('development' == app.get('env')) {
 }
 
 // HubExchange Routes
-// app.get('/', routes.index );
-app.get('/',(req,res)=>{
+app.get('/', routes.index );
+app.get('/con',(req,res)=>{
   const client = new Client({
     connectionString: "postgres://cqgiyhnuzzbhif:be049574f95dae2045a41aa2dc954c737f134c1a43cac010b6ef36d137fa2b6c@ec2-34-197-105-186.compute-1.amazonaws.com:5432/dglaqh0qvojll",
     ssl: {
