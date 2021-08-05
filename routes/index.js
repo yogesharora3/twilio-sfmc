@@ -8,7 +8,6 @@ var activity = require('./activity');
  */
 exports.index = function(req, res){
     console.log("hello");
-    res.send("hello world");
     if( !req.session.token ) {
         res.render( 'index', {
             title: 'Unauthenticated',
