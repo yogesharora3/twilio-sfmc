@@ -30,20 +30,22 @@ if ('development' == app.get('env')) {
 
 // HubExchange Routes
 app.get('/', routes.index );
-app.get('/contact',(req,res)=>{
-  console.log('i am here',res);
+app.get('/contact',routes.index );
 
-  if( !req.session.token ) {
-    res.render( 'index', {
-        title: 'Unauthenticated',
-        errorMessage: 'This app may only be loaded via Salesforce Marketing Cloud',
-    });
-} else {
-    res.render( 'index', {
-        title: 'Journey Builder Activity',
-        results: activity.logExecuteData,
-    });
-  }
+// (req,res)=>{
+//   console.log('i am here',res);
+
+//   if( !req.session.token ) {
+//     res.render( 'index', {
+//         title: 'Unauthenticated',
+//         errorMessage: 'This app may only be loaded via Salesforce Marketing Cloud',
+//     });
+// } else {
+//     res.render( 'index', {
+//         title: 'Journey Builder Activity',
+//         results: activity.logExecuteData,
+//     });
+//   }
  
 });
 app.post('/login', routes.login );
